@@ -5,6 +5,7 @@
 
 body {
 	background: #f2f2f2;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 .main{
@@ -19,4 +20,45 @@ body {
 
 .slides img{
 	width: 100%;
+}
+
+.slidesjs-pagination {
+	background: #424242;
+	list-style: none;
+	overflow: hidden;
+}
+
+.slidesjs-pagination li{
+	float: left;
+}
+
+.slidesjs-pagination li a {
+	display: block;
+	padding: 10px 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.slidesjs-pagination li a:hover{
+	background: #000;
+}
+
+.slides .active {
+	background: #000;
+}
+
+/*
+Previous/next
+*/
+.slidesjs-navigation {
+	background: #424242;
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	padding: 12px 20px;
+	float: right;
+}
+
+.slidesjs-navigation:hover {
+	background: #000;
 }

@@ -115,40 +115,40 @@
       });
       if (this.options.navigation.active) {
         prevButton = $("<a>", {
-          "class": "slidesjs-previous slidesjs-navigation",
+          "class": "slidesjs-next slidesjs-navigation icon-chevron-right",
           href: "#",
-          title: "Previous",
-          text: "Previous"
+          title: "",
+          text: ""
         }).appendTo($element);
         nextButton = $("<a>", {
-          "class": "slidesjs-next slidesjs-navigation",
+          "class": "slidesjs-previous slidesjs-navigation icon-chevron-left",
           href: "#",
-          title: "Next",
-          text: "Next"
+          title: "",
+          text: ""
         }).appendTo($element);
       }
-      $(".slidesjs-next", $element).click(function(e) {
+       $(".slidesjs-previous", $element).click(function(e) {
         e.preventDefault();
         _this.stop(true);
         return _this.next(_this.options.navigation.effect);
       });
-      $(".slidesjs-previous", $element).click(function(e) {
+      $(".slidesjs-next", $element).click(function(e) {
         e.preventDefault();
         _this.stop(true);
         return _this.previous(_this.options.navigation.effect);
       });
       if (this.options.play.active) {
         playButton = $("<a>", {
-          "class": "slidesjs-play slidesjs-navigation",
+          "class": "slidesjs-play slidesjs-navigation icon-play-circle",
           href: "#",
-          title: "Play",
-          text: "Play"
+          title: "",
+          text: ""
         }).appendTo($element);
         stopButton = $("<a>", {
-          "class": "slidesjs-stop slidesjs-navigation",
+          "class": "slidesjs-stop slidesjs-navigation icon-pause-circle",
           href: "#",
-          title: "Stop",
-          text: "Stop"
+          title: "",
+          text: ""
         }).appendTo($element);
         playButton.click(function(e) {
           e.preventDefault();
@@ -224,7 +224,7 @@
       var $element;
       $element = $(this.element);
       this.data = $.data(this);
-      $.data(this, "direction", "next");
+      $.data(this, "direction", "previous");
       if (effect === void 0) {
         effect = this.options.navigation.effect;
       }
@@ -238,7 +238,7 @@
       var $element;
       $element = $(this.element);
       this.data = $.data(this);
-      $.data(this, "direction", "previous");
+      $.data(this, "direction", "next");
       if (effect === void 0) {
         effect = this.options.navigation.effect;
       }
